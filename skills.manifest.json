@@ -1,0 +1,94 @@
+{
+  "external_skills": [
+    {
+      "name": "academic-research-suite",
+      "repo": "Imbad0202/academic-research-skills-codex",
+      "ref": "main",
+      "path": "skills/academic-research-suite",
+<<<<<<< HEAD
+      "purpose": "学术研究、论文阅读、写作、review、实验规划",
+      "install_method": "skill_installer_git",
+      "enabled_by_default": true
+=======
+      "purpose": "学术研究、论文阅读、写作、review、实验规划"
+>>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
+    },
+    {
+      "name": "handoff",
+      "repo": "mattpocock/skills",
+      "ref": "main",
+      "path": "skills/productivity/handoff",
+<<<<<<< HEAD
+      "purpose": "长会话交接",
+      "install_method": "skill_installer_git",
+      "enabled_by_default": true
+=======
+      "purpose": "长会话交接"
+>>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
+    },
+    {
+      "name": "grill-me",
+      "repo": "mattpocock/skills",
+      "ref": "main",
+      "path": "skills/productivity/grill-me",
+<<<<<<< HEAD
+      "purpose": "方法和实验设计质询",
+      "install_method": "skill_installer_git",
+      "enabled_by_default": true
+=======
+      "purpose": "方法和实验设计质询"
+>>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
+    },
+    {
+      "name": "excalidraw",
+      "repo": "coleam00/excalidraw-diagram-skill",
+      "ref": "main",
+      "path": ".",
+<<<<<<< HEAD
+      "purpose": "方法图和流程图",
+      "install_method": "skill_installer_git",
+      "enabled_by_default": true
+=======
+      "purpose": "方法图和流程图"
+>>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
+    },
+    {
+      "name": "frontend-slides",
+      "repo": "zarazhangrui/frontend-slides",
+      "ref": "main",
+      "path": ".",
+<<<<<<< HEAD
+      "purpose": "HTML slides 生成",
+      "install_method": "skill_installer_git",
+      "enabled_by_default": true
+    },
+    {
+      "name": "supervisor-skills",
+      "display_name": "Supervisor-Skills",
+      "repo": "HKUSTDial/Supervisor-Skills",
+      "ref": "main",
+      "path": "plugins/phd-research/skills",
+      "install_method": "codex_prompt",
+      "enabled_by_default": true,
+      "purpose": "科研副导师增强：idea 评估、Introduction/论文结构、投稿前审查、图表设计建议。",
+      "usage_boundary": "只做导师式科研审查和建议，不接管项目导航、实验执行或记录。",
+      "install_prompt": "Help me install Supervisor-Skills from https://github.com/HKUSTDial/Supervisor-Skills with Skills."
+    },
+    {
+      "name": "superpowers",
+      "display_name": "Superpowers",
+      "repo": "obra/superpowers",
+      "ref": "main",
+      "path": "",
+      "install_method": "codex_plugin_marketplace",
+      "enabled_by_default": true,
+      "purpose": "工程实现增强：复杂代码实现、重构、TDD、git worktree、计划执行。",
+      "usage_boundary": "只在代码实现/重构阶段使用，不接管论文项目总控或 managed experiment 记录。",
+      "codex_cli_install": "/plugins → search superpowers → Install Plugin",
+      "codex_app_install": "Plugins sidebar → Coding → Superpowers → +"
+=======
+      "purpose": "HTML slides 生成"
+>>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
+    }
+  ]
+}

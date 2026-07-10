@@ -1,0 +1,11 @@
+{
+  "name": "paper-factory-slide-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generate editable PPTX from rendered HTML slides.",
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.55.0",
+    "pptxgenjs": "^3.13.0"
+  }
+}

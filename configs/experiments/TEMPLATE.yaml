@@ -1,0 +1,13 @@
+experiment_id: pilot_001
+phase: pilot
+claim: TBD
+dataset: data/processed/toy_eval.jsonl
+method: baseline_v0
+seed: 42
+params:
+  top_k: 5
+  model: TBD
+output_dir: results/processed/pilot_001
+metrics_path: results/processed/pilot_001/metrics.json
+command: "python src/experiments/run_eval.py --config configs/experiments/pilot_001.yaml"
+notes_cn: "TBD"

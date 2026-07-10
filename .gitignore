@@ -1,0 +1,39 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+*.log
+
+# Data and results
+data/raw/
+data/private/
+results/raw/
+results/cache/
+outputs/
+wandb/
+mlruns/
+
+# References: keep PDFs private by default
+references/pdfs/*.pdf
+references/pdfs/**/*.pdf
+
+# Public release artifacts
+public_release/package/
+
+# LaTeX artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.pdf
+
+# Slides generated files
+slides/html/
+slides/pptx/
+slides/pdf/
+slides/screenshots/
+node_modules/
+package-lock.json

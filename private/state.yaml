@@ -1,0 +1,6 @@
+stage_id: 0
+stage_name: 模板/环境初始化
+updated_at: ""
+current_goal: 初始化论文项目
+next_stage_id: 1
+next_stage_name: 选题与研究问题定义
