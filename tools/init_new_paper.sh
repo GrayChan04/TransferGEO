@@ -4,7 +4,7 @@ set -euo pipefail
 echo "初始化论文项目..."
 mkdir -p private/dialogues private/handoffs private/literature private/reviews
 mkdir -p experiments/run_cards experiments/env_snapshots
-mkdir -p references/pdfs references/bib/official references/bib/arxiv references/notes
+mkdir -p references/pdfs references/bib references/notes
 mkdir -p venues/_TEMPLATE/paper_template
 mkdir -p slides/source slides/html slides/pptx slides/pdf slides/screenshots
 mkdir -p data/raw data/processed results/raw results/processed

@@ -1,5 +1,6 @@
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
 $Installer = Join-Path $CodexHome "skills/.system/skill-installer/scripts/install-skill-from-github.py"
+$DestRoot = Join-Path $CodexHome "skills"
 Write-Host "== Installing / reminding external skills =="
 $manifest = Get-Content skills.manifest.json | ConvertFrom-Json
 foreach ($s in $manifest.external_skills) {
@@ -11,8 +12,12 @@ foreach ($s in $manifest.external_skills) {
             Write-Host "         Repo: $($s.repo) Path: $($s.path) Ref: $($s.ref)"
             continue
         }
+        if (Test-Path (Join-Path $DestRoot $name)) {
+            Write-Host "[skip] $name`: already installed"
+            continue
+        }
         Write-Host "[install] $name from $($s.repo):$($s.path)"
-        python $Installer --repo $s.repo --ref $s.ref --path $s.path --method git
+        python $Installer --repo $s.repo --ref $s.ref --path $s.path --name $name --method auto
     }
     elseif ($method -eq "codex_prompt") {
         Write-Host "[prompt] $name: install inside Codex with:"

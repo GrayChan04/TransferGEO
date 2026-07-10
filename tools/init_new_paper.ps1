@@ -2,7 +2,7 @@ Write-Host "初始化论文项目..."
 $dirs = @(
 "private/dialogues","private/handoffs","private/literature","private/reviews",
 "experiments/run_cards","experiments/env_snapshots",
-"references/pdfs","references/bib/official","references/bib/arxiv","references/notes",
+"references/pdfs","references/bib","references/notes",
 "venues/_TEMPLATE/paper_template",
 "slides/source","slides/html","slides/pptx","slides/pdf","slides/screenshots",
 "data/raw","data/processed","results/raw","results/processed"

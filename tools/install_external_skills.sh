@@ -7,6 +7,7 @@ from pathlib import Path
 
 manifest = json.load(open('skills.manifest.json', encoding='utf-8'))
 installer = Path(os.environ.get('CODEX_HOME', str(Path.home() / '.codex'))) / 'skills/.system/skill-installer/scripts/install-skill-from-github.py'
+dest_root = Path(os.environ.get('CODEX_HOME', str(Path.home() / '.codex'))) / 'skills'
 
 print('== Installing / reminding external skills ==')
 for s in manifest.get('external_skills', []):
@@ -21,8 +22,11 @@ for s in manifest.get('external_skills', []):
             print(f'[manual] {name}: Codex skill installer not found: {installer}')
             print(f"         Repo: {s.get('repo')}  Path: {s.get('path')}  Ref: {s.get('ref','main')}")
             continue
+        if (dest_root / name).exists():
+            print(f'[skip] {name}: already installed')
+            continue
         print(f"[install] {name} from {s.get('repo')}:{s.get('path')}")
-        subprocess.run([sys.executable, str(installer), '--repo', s['repo'], '--ref', s.get('ref','main'), '--path', s.get('path','.'), '--method', 'git'], check=False)
+        subprocess.run([sys.executable, str(installer), '--repo', s['repo'], '--ref', s.get('ref','main'), '--path', s.get('path','.'), '--name', name, '--method', 'auto'], check=False)
     elif method == 'codex_prompt':
         print(f'[prompt] {name}: install inside Codex with:')
         print(f"         {s.get('install_prompt')}")
