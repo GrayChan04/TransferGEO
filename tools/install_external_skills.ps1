@@ -1,6 +1,5 @@
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
 $Installer = Join-Path $CodexHome "skills/.system/skill-installer/scripts/install-skill-from-github.py"
-<<<<<<< HEAD
 Write-Host "== Installing / reminding external skills =="
 $manifest = Get-Content skills.manifest.json | ConvertFrom-Json
 foreach ($s in $manifest.external_skills) {
@@ -29,16 +28,3 @@ foreach ($s in $manifest.external_skills) {
     }
 }
 Write-Host "After installation, restart Codex and run /skills or /plugins to verify availability."
-=======
-if (-Not (Test-Path $Installer)) {
-    Write-Host "未找到 Codex skill installer: $Installer"
-    Write-Host "请在 Codex 中使用 `$skill-installer，或手动安装 skills.manifest.json 中的外部 Skill。"
-    exit 0
-}
-$manifest = Get-Content skills.manifest.json | ConvertFrom-Json
-foreach ($s in $manifest.external_skills) {
-    Write-Host "Installing $($s.name)..."
-    python $Installer --repo $s.repo --ref $s.ref --path $s.path --method git
-}
-Write-Host "完成。请重启 Codex 并运行 /skills。"
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f

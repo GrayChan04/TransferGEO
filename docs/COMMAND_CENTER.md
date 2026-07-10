@@ -161,7 +161,6 @@ python tools/project_brief.py
 ```text
 Use $paper-orchestrator-cn to 接管导航。请告诉我当前阶段、该用哪个 Skill、要读写哪些文件、要运行哪些命令。
 ```
-<<<<<<< HEAD
 
 ## 第三方增强项
 
@@ -190,5 +189,3 @@ Use Supervisor-Skills to evaluate my research idea based on private/01_研究问
 ```text
 Use Superpowers to implement src/experiments/run_eval.py based on configs/experiments/TEMPLATE.yaml. Keep it compatible with $experiment-manager-cn and scripts/experiments/run_managed_experiment.py.
 ```
-=======
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f

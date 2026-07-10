@@ -21,10 +21,7 @@ for p in [
     "docs/EXPERIMENT_SAFETY.md",
     "docs/AUTO_REMINDER.md",
     "docs/FINAL_V1_SCOPE.md",
-<<<<<<< HEAD
     "docs/EXTERNAL_SKILLS.md",
-=======
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
     "scripts/experiments/create_managed_experiment.py",
     "experiments/registry.csv",
     "paper/references.bib",
@@ -76,7 +73,6 @@ for p in Path(".").rglob("*"):
             if v in text:
                 warnings.append(f"发现历史版本字符串 {v}: {p}")
 
-<<<<<<< HEAD
 
 try:
     manifest = json.load(open("skills.manifest.json", encoding="utf-8"))
@@ -87,8 +83,6 @@ try:
 except Exception as e:
     errors.append(f"无法检查 skills.manifest.json 增强项：{e}")
 
-=======
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
 print("Template doctor")
 print("Errors:", len(errors))
 for e in errors:

@@ -56,11 +56,8 @@ def main():
     print("- grill-me：质询 idea / 方法 / 实验设计")
     print("- experiment-manager-cn：实验设计与记录")
     print("- session-recorder-cn：记录重要决策")
-<<<<<<< HEAD
     print("- Supervisor-Skills：科研副导师式 idea/投稿前审查（增强项）")
     print("- Superpowers：复杂代码实现、重构、TDD（增强插件）")
-=======
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
     print()
 
     key_files = [

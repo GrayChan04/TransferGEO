@@ -5,59 +5,42 @@
       "repo": "Imbad0202/academic-research-skills-codex",
       "ref": "main",
       "path": "skills/academic-research-suite",
-<<<<<<< HEAD
       "purpose": "学术研究、论文阅读、写作、review、实验规划",
       "install_method": "skill_installer_git",
       "enabled_by_default": true
-=======
-      "purpose": "学术研究、论文阅读、写作、review、实验规划"
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
     },
     {
       "name": "handoff",
       "repo": "mattpocock/skills",
       "ref": "main",
       "path": "skills/productivity/handoff",
-<<<<<<< HEAD
       "purpose": "长会话交接",
       "install_method": "skill_installer_git",
       "enabled_by_default": true
-=======
-      "purpose": "长会话交接"
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
     },
     {
       "name": "grill-me",
       "repo": "mattpocock/skills",
       "ref": "main",
       "path": "skills/productivity/grill-me",
-<<<<<<< HEAD
       "purpose": "方法和实验设计质询",
       "install_method": "skill_installer_git",
       "enabled_by_default": true
-=======
-      "purpose": "方法和实验设计质询"
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
     },
     {
       "name": "excalidraw",
       "repo": "coleam00/excalidraw-diagram-skill",
       "ref": "main",
       "path": ".",
-<<<<<<< HEAD
       "purpose": "方法图和流程图",
       "install_method": "skill_installer_git",
       "enabled_by_default": true
-=======
-      "purpose": "方法图和流程图"
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
     },
     {
       "name": "frontend-slides",
       "repo": "zarazhangrui/frontend-slides",
       "ref": "main",
       "path": ".",
-<<<<<<< HEAD
       "purpose": "HTML slides 生成",
       "install_method": "skill_installer_git",
       "enabled_by_default": true
@@ -86,9 +69,6 @@
       "usage_boundary": "只在代码实现/重构阶段使用，不接管论文项目总控或 managed experiment 记录。",
       "codex_cli_install": "/plugins → search superpowers → Install Plugin",
       "codex_app_install": "Plugins sidebar → Coding → Superpowers → +"
-=======
-      "purpose": "HTML slides 生成"
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
     }
   ]
 }

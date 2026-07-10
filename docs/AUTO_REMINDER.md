@@ -44,7 +44,6 @@ Codex 在这些情况下必须主动提醒：
 - 用户准备 public release
 - 用户的指令不明确
 - 一个长任务结束后需要建议下一步
-<<<<<<< HEAD
 
 ## Supervisor-Skills / Superpowers 自动提醒
 
@@ -67,5 +66,3 @@ Codex 在这些情况下必须主动提醒：
 
 - 项目导航仍由 `$paper-orchestrator-cn` 负责；
 - 自动实验执行和记录仍由 `$experiment-manager-cn` 负责。
-=======
->>>>>>> 1bd3e85eba289b200cbc1799c28eb5dd4f06b03f
