@@ -159,9 +159,9 @@ Use $paper-orchestrator-cn to 接管导航。请告诉我当前阶段、该用�
 
 这个规则已经写入 `AGENTS.md`、`paper-orchestrator-cn` 和 `docs/AUTO_REMINDER.md`。
 
-## 第三方增强项：Supervisor-Skills 和 Superpowers
+## 第三方增强项：Supervisor-Skills
 
-这两个已经纳入 `skills.manifest.json` 和 `skills.lock.md`，并由：
+该能力已经纳入 `skills.manifest.json` 和 `skills.lock.md`，并由：
 
 ```bash
 bash tools/install_external_skills.sh
@@ -170,7 +170,6 @@ bash tools/install_external_skills.sh
 统一提醒安装。
 
 - **Supervisor-Skills**：科研副导师增强，适合 idea 评估、论文结构、投稿前审查、图表建议。
-- **Superpowers**：工程实现增强，适合复杂代码实现、重构、TDD、git worktree、计划执行。
 
 核心流程不变：
 
@@ -179,19 +178,17 @@ bash tools/install_external_skills.sh
 自动实验：$experiment-manager-cn
 实验设计：$academic-research-suite
 导师式审查：Supervisor-Skills
-复杂工程实现：Superpowers
 ```
 
-## 第三方增强项：Supervisor-Skills 和 Superpowers
+## 第三方增强项：Supervisor-Skills
 
-这两个已纳入 `skills.manifest.json` 和 `skills.lock.md`，并由以下命令统一提醒安装：
+该能力已纳入 `skills.manifest.json` 和 `skills.lock.md`，并由以下命令统一提醒安装：
 
 ```bash
 bash tools/install_external_skills.sh
 ```
 
 - **Supervisor-Skills**：科研副导师增强，适合 idea 评估、论文结构、投稿前审查、图表建议。
-- **Superpowers**：工程实现增强，适合复杂代码实现、重构、TDD、git worktree、计划执行。
 
 核心流程不变：
 
@@ -200,5 +197,4 @@ bash tools/install_external_skills.sh
 自动实验：$experiment-manager-cn
 实验设计：$academic-research-suite
 导师式审查：Supervisor-Skills
-复杂工程实现：Superpowers
 ```

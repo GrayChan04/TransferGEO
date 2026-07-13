@@ -57,7 +57,6 @@ def main():
     print("- experiment-manager-cn：实验设计与记录")
     print("- session-recorder-cn：记录重要决策")
     print("- Supervisor-Skills：科研副导师式 idea/投稿前审查（增强项）")
-    print("- Superpowers：复杂代码实现、重构、TDD（增强插件）")
     print()
 
     key_files = [

@@ -56,19 +56,6 @@
       "purpose": "科研副导师增强：idea 评估、Introduction/论文结构、投稿前审查、图表设计建议。",
       "usage_boundary": "只做导师式科研审查和建议，不接管项目导航、实验执行或记录。",
       "install_prompt": "Help me install Supervisor-Skills from https://github.com/HKUSTDial/Supervisor-Skills with Skills."
-    },
-    {
-      "name": "superpowers",
-      "display_name": "Superpowers",
-      "repo": "obra/superpowers",
-      "ref": "main",
-      "path": "",
-      "install_method": "codex_plugin_marketplace",
-      "enabled_by_default": true,
-      "purpose": "工程实现增强：复杂代码实现、重构、TDD、git worktree、计划执行。",
-      "usage_boundary": "只在代码实现/重构阶段使用，不接管论文项目总控或 managed experiment 记录。",
-      "codex_cli_install": "/plugins → search superpowers → Install Plugin",
-      "codex_app_install": "Plugins sidebar → Coding → Superpowers → +"
     }
   ]
 }

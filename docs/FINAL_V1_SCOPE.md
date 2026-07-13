@@ -10,7 +10,6 @@
 - 本地中文 Skill
 - 第三方 Skill / 插件安装清单
 - Supervisor-Skills 科研副导师增强
-- Superpowers 工程实现增强
 - 中文内部记录
 - BibTeX 人工粘贴到 `paper/references.bib`
 - Managed experiment：自然语言参数 → config → 执行 → 记录 → git checkpoint

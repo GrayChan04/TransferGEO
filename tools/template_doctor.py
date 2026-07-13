@@ -77,7 +77,7 @@ for p in Path(".").rglob("*"):
 try:
     manifest = json.load(open("skills.manifest.json", encoding="utf-8"))
     names = {s.get("name") for s in manifest.get("external_skills", [])}
-    for expected_skill in ["supervisor-skills", "superpowers"]:
+    for expected_skill in ["supervisor-skills"]:
         if expected_skill not in names:
             errors.append(f"skills.manifest.json 缺少第三方增强项：{expected_skill}")
 except Exception as e:

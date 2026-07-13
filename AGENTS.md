@@ -383,7 +383,7 @@ Use $paper-orchestrator-cn to 接管导航。请告诉我当前阶段、该用�
 
 注意：不要让用户自己翻 README 找命令。你应该直接给出可复制的下一步。
 
-## Supervisor-Skills / Superpowers 路由规则
+## Supervisor-Skills 路由规则
 
 ### Supervisor-Skills
 
@@ -401,31 +401,11 @@ Use $paper-orchestrator-cn to 接管导航。请告诉我当前阶段、该用�
 - 不接管 managed experiment；实验执行仍由 `$experiment-manager-cn` 负责。
 - 它的结论如果会影响研究方向、论文结构或投稿策略，需要用 `$session-recorder-cn` 记录为轻量事件。
 
-### Superpowers
-
-当用户进入复杂工程实现阶段时，可以建议 Superpowers：
-
-- 实现实验代码
-- 重构 experiment pipeline
-- 写测试
-- 复杂代码计划与执行
-- git worktree / TDD / code review 流程
-
-边界：
-
-- 不接管论文项目总控。
-- 不替代 `$experiment-manager-cn` 的实验执行与日志系统。
-- 不允许未经确认修改 managed experiment 接口：
-  - `configs/experiments/*.yaml`
-  - `experiments/registry.csv`
-  - `scripts/experiments/run_managed_experiment.py`
-
 默认优先级：
 
 - “该做什么科研工作” → `$paper-orchestrator-cn`
 - “该怎么设计实验” → `$academic-research-suite`
 - “把实验跑起来并记录” → `$experiment-manager-cn`
-- “实现或重构代码” → Superpowers
 - “导师式评价或投稿前挑刺” → Supervisor-Skills
 
 ## 新增第三方增强 Skill / 插件路由
@@ -446,29 +426,9 @@ Use $paper-orchestrator-cn to 接管导航。请告诉我当前阶段、该用�
 - 不接管 managed experiment；实验执行仍由 `$experiment-manager-cn` 负责。
 - 它的结论如果会影响研究方向、论文结构或投稿策略，需要用 `$session-recorder-cn` 记录为轻量事件。
 
-### Superpowers
-
-当用户进入复杂工程实现阶段时，可以建议 Superpowers：
-
-- 实现实验代码
-- 重构 experiment pipeline
-- 写测试
-- 复杂代码计划与执行
-- git worktree / TDD / code review 流程
-
-边界：
-
-- 不接管论文项目总控。
-- 不替代 `$experiment-manager-cn` 的实验执行与日志系统。
-- 不允许未经确认修改 managed experiment 接口：
-  - `configs/experiments/*.yaml`
-  - `experiments/registry.csv`
-  - `scripts/experiments/run_managed_experiment.py`
-
 ### 默认优先级
 
 如果任务是“该做什么科研工作”，先用 `$paper-orchestrator-cn`。
 如果任务是“该怎么设计实验”，优先 `$academic-research-suite`。
 如果任务是“把实验跑起来并记录”，优先 `$experiment-manager-cn`。
-如果任务是“实现或重构代码”，可以建议 Superpowers。
 如果任务是“导师式评价或投稿前挑刺”，可以建议 Supervisor-Skills。

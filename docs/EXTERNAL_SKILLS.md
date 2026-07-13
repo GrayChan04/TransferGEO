@@ -54,36 +54,6 @@ Use Supervisor-Skills to evaluate my research idea based on private/01_研究问
 Use Supervisor-Skills to perform a pre-submission review based on paper/main.tex, paper/claim_tracker.csv, and experiments/experiment_log.csv.
 ```
 
-## Superpowers
-
-定位：工程实现增强插件。
-
-适合场景：
-
-- 实现实验代码
-- 重构实验 pipeline
-- 写测试
-- 使用 git worktree 做复杂开发
-- 把实现任务拆解成计划并执行
-
-使用边界：
-
-- 不接管论文总控；总控仍由 `$paper-orchestrator-cn` 负责。
-- 不接管实验日志；实验运行与记录仍由 `$experiment-manager-cn` 负责。
-- 不默认修改 managed experiment 接口。
-
-推荐调用：
-
-```text
-Use Superpowers to implement src/experiments/run_eval.py based on configs/experiments/TEMPLATE.yaml. Keep it compatible with $experiment-manager-cn and scripts/experiments/run_managed_experiment.py.
-```
-
-重构时：
-
-```text
-Use Superpowers to plan and execute a refactor of the experiment pipeline. Do not change configs/experiments/*.yaml, experiments/registry.csv, or scripts/experiments/run_managed_experiment.py without confirmation.
-```
-
 ## 推荐分工
 
 | 任务 | 推荐能力 |
@@ -93,6 +63,5 @@ Use Superpowers to plan and execute a refactor of the experiment pipeline. Do no
 | idea / 方法 / 实验质询 | `$grill-me` |
 | 科研导师式评估、投稿前自查 | Supervisor-Skills |
 | 自动跑实验、记录结果、git checkpoint | `$experiment-manager-cn` |
-| 复杂代码实现、重构、TDD | Superpowers |
 | 记录重要决策 | `$session-recorder-cn` |
 | 可编辑 PPT | `$frontend-slides` + `$visual-slides-cn` |

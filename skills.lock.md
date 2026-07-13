@@ -10,6 +10,5 @@
 | excalidraw | coleam00/excalidraw-diagram-skill | skill_installer_git | main | 方法图和流程图 | 画图，不接管 slides 管理 |
 | frontend-slides | zarazhangrui/frontend-slides | skill_installer_git | main | HTML slides 生成 | HTML 生成，可编辑 PPTX 仍由本模板脚本负责 |
 | supervisor-skills | HKUSTDial/Supervisor-Skills | codex_prompt | main | 科研副导师：idea 评估、论文结构、投稿前审查、图表建议 | 可选科研审查增强，不接管项目导航/实验执行 |
-| superpowers | obra/superpowers | codex_plugin_marketplace | main | 工程增强：复杂实现、重构、TDD、git worktree、计划执行 | 可选工程插件，不接管论文项目总控 |
 
 正式长期使用前，建议固定具体 commit 或在 `skills.lock.md` 中记录安装日期。

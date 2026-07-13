@@ -170,22 +170,10 @@ Use $paper-orchestrator-cn to 接管导航。请告诉我当前阶段、该用�
 Use Supervisor-Skills to evaluate my research idea based on private/01_研究问题.md and private/03_方法卡.md. Focus on novelty, feasibility, risks, and CCF A potential.
 ```
 
-### Superpowers
-
-```text
-Use Superpowers to implement src/experiments/run_eval.py based on configs/experiments/TEMPLATE.yaml. Keep it compatible with $experiment-manager-cn and scripts/experiments/run_managed_experiment.py.
-```
-
 ## 第三方增强项
 
 ### Supervisor-Skills
 
 ```text
 Use Supervisor-Skills to evaluate my research idea based on private/01_研究问题.md and private/03_方法卡.md. Focus on novelty, feasibility, risks, and CCF A potential.
-```
-
-### Superpowers
-
-```text
-Use Superpowers to implement src/experiments/run_eval.py based on configs/experiments/TEMPLATE.yaml. Keep it compatible with $experiment-manager-cn and scripts/experiments/run_managed_experiment.py.
 ```
