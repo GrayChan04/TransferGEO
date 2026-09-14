@@ -1,0 +1,22 @@
+{
+  "experiment_id": "literature_truncated_answer_length_audit_v1",
+  "phase": "pilot_answer_length_audit",
+  "dataset": "literature_methods_v4_shared_source_prefix_v1",
+  "method": "unified_v7_truncated_tokenizer_audit",
+  "seed": 0,
+  "params": {
+    "input_budget": 20480,
+    "expected_records": 9567,
+    "models": [
+      "qwen",
+      "llama",
+      "mistral"
+    ]
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/19_truncated_answer_length_audit",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/19_truncated_answer_length_audit/metrics.json",
+  "command": "conda run --no-capture-output -n transfergeo python code/audit_necessity_answer_input_lengths.py --experiment-id literature_truncated_answer_length_audit_v1 --rewrite-profile literature_methods --rewrites results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/realized_documents.jsonl --missing-rewrites results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/missing_rewrites.jsonl --source-truncations results/processed/necessity_pilot/literature_methods/v4/18_shared_source_truncation/source_truncations.jsonl --answer-prompt-protocol unified_answer_v7 --models qwen llama mistral --input-budget 20480 --seed 0 --output-dir results/processed/necessity_pilot/literature_methods/v4/19_truncated_answer_length_audit",
+  "created_at": "2026-09-12T10:05:59.772235+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "81eee6e8525ae620e76ad530e3c47ed6cc35359cb42b2b11f6800c9238c35765"
+}

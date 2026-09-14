@@ -1,0 +1,3 @@
+# Official-code-compatible GEO objective metrics use nltk.sent_tokenize and
+# nltk.word_tokenize. Pin the package; store punkt_tab under data/raw/nltk_data.
+nltk==3.10.2

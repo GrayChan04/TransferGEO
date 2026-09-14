@@ -1,0 +1,23 @@
+{
+  "experiment_id": "repaired_subjective_alignment_plan_v1",
+  "phase": "diagnostic_cpu",
+  "dataset": "unified_answer_v7/39537/repaired_citations",
+  "method": "repaired_subjective_alignment_plan_v1",
+  "seed": 0,
+  "params": {
+    "judge_seeds": [
+      0,
+      1,
+      2
+    ],
+    "dimensions": 7,
+    "gpu_required": false,
+    "run_judge": false
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_alignment_plan_v1",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_alignment_plan_v1/metrics.json",
+  "command": "conda run -n transfergeo python code/plan_repaired_subjective_scores.py --experiment-id repaired_subjective_alignment_plan_v1 --old-answers results/processed/necessity_pilot/unified_answer_prompt_v7/13_citation_canonicalization_audit_v3/canonicalized_answers.jsonl --new-answers results/processed/necessity_pilot/unified_answer_prompt_v7/detached_citation_repair_v1/canonicalized_answers.jsonl --old-scores results/processed/necessity_pilot/unified_answer_prompt_v7/17_raid_subjective_judge_canonicalized_v3/judge_scores.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_alignment_plan_v1 --expected-count 39537",
+  "created_at": "2026-09-09T08:17:12.599843+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "ffddbfceae5147c449ecbdc4a925f6ee1d2d9ad977e42e530ef38e340933b340"
+}

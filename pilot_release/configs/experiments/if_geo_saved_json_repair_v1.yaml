@@ -1,0 +1,19 @@
+{
+  "experiment_id": "if_geo_saved_json_repair_v1",
+  "phase": "pilot_json_repair",
+  "dataset": "literature_methods_v4_if_geo_28_failures",
+  "method": "inspected_saved_json_syntax_repair_v1",
+  "seed": 0,
+  "params": {
+    "selected_json_failures": 18,
+    "empty_excerpt_untouched": 10,
+    "gpu_calls": 0,
+    "capped_outputs_untouched": 98
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/14_if_geo_json_repair",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/14_if_geo_json_repair/metrics.json",
+  "command": "python code/repair_saved_if_geo_json.py --input results/processed/necessity_pilot/literature_methods/v4/13_if_geo_output_audit/failed_outputs.jsonl --output-dir results/processed/necessity_pilot/literature_methods/v4/14_if_geo_json_repair --experiment-id if_geo_saved_json_repair_v1",
+  "created_at": "2026-09-12T06:11:02.846292+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "f9c1d50bd72027cab9cbff7a0c3f5b8566afa4ca0b570878a7edef831ebbad02"
+}

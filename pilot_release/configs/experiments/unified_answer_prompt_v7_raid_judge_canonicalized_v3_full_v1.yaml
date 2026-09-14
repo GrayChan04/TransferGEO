@@ -1,0 +1,35 @@
+{
+  "experiment_id": "unified_answer_prompt_v7_raid_judge_canonicalized_v3_full_v1",
+  "phase": "pilot_subjective_correction_aggregation",
+  "dataset": "results/processed/necessity_pilot/unified_answer_prompt_v7/13_citation_canonicalization_audit_v3/canonicalized_answers.jsonl + results/processed/necessity_pilot/unified_answer_prompt_v7/15_subjective_score_alignment_audit_v1/answer_alignment.jsonl + results/processed/necessity_pilot/unified_answer_prompt_v7/10_raid_subjective_judge_full/judge_trials.jsonl + results/processed/necessity_pilot/unified_answer_prompt_v7/16_raid_subjective_judge_canonicalized_v3_rerun_shards + data/processed/necessity_pilot_v1/sample_manifest.jsonl",
+  "method": "raid_subjective_canonicalized_v3_merge_v1",
+  "seed": "0,1,2",
+  "params": {
+    "answer_count": 39537,
+    "dimensions": 7,
+    "judge_seeds": [
+      0,
+      1,
+      2
+    ],
+    "expected_trials": 830277,
+    "reuse_old_score_trials": 392427,
+    "rerun_glm_judge_trials": 68943,
+    "deterministic_zero_trials": 368907,
+    "num_rerun_shards": 4,
+    "source_old_experiment_id": "unified_answer_prompt_v7_raid_judge_full_v1",
+    "source_rerun_experiment_id": "unified_answer_prompt_v7_raid_judge_canonicalized_v3_rerun_v1",
+    "gpu_required": false,
+    "llm_required": false,
+    "overwrite_existing_results": false,
+    "create_branch": false,
+    "git_commit": false,
+    "failure_policy": "stop_on_any_integrity_error"
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/17_raid_subjective_judge_canonicalized_v3",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/17_raid_subjective_judge_canonicalized_v3/metrics.json",
+  "command": "conda run -n transfergeo python code/merge_canonicalized_raid_judge_scores.py --experiment-id unified_answer_prompt_v7_raid_judge_canonicalized_v3_full_v1 --canonicalized-answers results/processed/necessity_pilot/unified_answer_prompt_v7/13_citation_canonicalization_audit_v3/canonicalized_answers.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --alignment-manifest results/processed/necessity_pilot/unified_answer_prompt_v7/15_subjective_score_alignment_audit_v1/answer_alignment.jsonl --old-judge-trials results/processed/necessity_pilot/unified_answer_prompt_v7/10_raid_subjective_judge_full/judge_trials.jsonl --rerun-shards-root results/processed/necessity_pilot/unified_answer_prompt_v7/16_raid_subjective_judge_canonicalized_v3_rerun_shards --num-rerun-shards 4 --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/17_raid_subjective_judge_canonicalized_v3 --seeds 0 1 2 --expected-answer-count 39537 --expected-trial-count 830277 --expected-reuse-trial-count 392427 --expected-rerun-trial-count 68943 --expected-zero-trial-count 368907 --source-old-experiment-id unified_answer_prompt_v7_raid_judge_full_v1 --source-rerun-experiment-id unified_answer_prompt_v7_raid_judge_canonicalized_v3_rerun_v1",
+  "created_at": "2026-09-06T11:57:09.103287+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "61ce80aceaf344636898cd51bc09b2e68cb68b5f192a7fb0097c25b833015d1c"
+}

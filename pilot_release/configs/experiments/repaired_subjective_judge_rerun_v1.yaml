@@ -1,0 +1,30 @@
+{
+  "experiment_id": "repaired_subjective_judge_rerun_v1",
+  "phase": "pilot_subjective_rescore",
+  "dataset": "repaired_subjective_alignment_plan_v1/74",
+  "method": "raid_glm4_9b_seven_dimensions_three_repeats_v1",
+  "seed": 0,
+  "params": {
+    "model": "ZhipuAI/GLM-4-9B-0414",
+    "physical_gpus": [
+      2,
+      7
+    ],
+    "judge_seeds": [
+      0,
+      1,
+      2
+    ],
+    "dimensions": 7,
+    "expected_trials": 1554,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_new_tokens": 16
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_judge_rerun_v1/shard_0",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_judge_rerun_v1/shard_0/metrics.json",
+  "command": "env CUDA_VISIBLE_DEVICES=2,7 conda run -n transfergeo python code/run_raid_judge_shard.py --experiment-id repaired_subjective_judge_rerun_v1 --input results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_alignment_plan_v1/rerun_glm_judge_answers.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_judge_rerun_v1/shard_0 --shard-index 0 --num-shards 1 --seeds 0 1 2 --temperature 0.7 --top-p 0.9 --max-new-tokens 16 --physical-gpus 2 7",
+  "created_at": "2026-09-09T08:20:58.179345+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "53ca5c5e690b02d28cc5f6630a9a0aaaccf881ceb8dbca70c01cde368b7b7561"
+}

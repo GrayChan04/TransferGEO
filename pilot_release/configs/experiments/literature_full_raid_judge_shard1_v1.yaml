@@ -1,0 +1,35 @@
+{
+  "experiment_id": "literature_full_raid_judge_shard1_v1",
+  "phase": "pilot_subjective_full",
+  "dataset": "literature_v4_scoring_answers28701",
+  "method": "raid_glm4_9b_seven_dimensions_three_repeats_v1",
+  "seed": "0,1,2",
+  "params": {
+    "shard_index": 1,
+    "num_shards": 4,
+    "answer_count": 7145,
+    "expected_trials": 150045,
+    "expected_glm_trials": 85785,
+    "expected_zero_trials": 64260,
+    "model": "ZhipuAI/GLM-4-9B-0414",
+    "dimensions": 7,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_new_tokens": 16,
+    "physical_gpus": [
+      2,
+      3
+    ]
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/22_subjective_judge/shard1",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/22_subjective_judge/shard1/metrics.json",
+  "command": "env CUDA_VISIBLE_DEVICES=2,3 conda run --no-capture-output -n transfergeo python code/run_raid_judge_shard.py --experiment-id literature_full_raid_judge_shard1_v1 --input results/processed/necessity_pilot/literature_methods/v4/21_objective_scoring_fixed_tail/03_detached_citation_repair/canonicalized_answers.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/literature_methods/v4/22_subjective_judge/shard1 --shard-index 1 --num-shards 4 --seeds 0 1 2 --temperature 0.7 --top-p 0.9 --max-new-tokens 16 --physical-gpus 2 3",
+  "created_at": "2026-09-13T11:20:28.896078+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "0bd86dff33f00d7e40998f87f9da4c69730ce06d018d13ed5605a25dc1fbce65"
+}

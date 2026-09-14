@@ -1,0 +1,19 @@
+{
+  "experiment_id": "literature_completed_rewrites_merge_v1",
+  "phase": "pilot_merge",
+  "dataset": "literature_methods_v4_full_and_continuation",
+  "method": "lossless_disjoint_merge_v1",
+  "seed": 0,
+  "params": {
+    "expected_rewrites": 2800,
+    "completed": 2789,
+    "missing": 11,
+    "text_modification": false
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/metrics.json",
+  "command": "python code/merge_literature_completed_rewrites.py --original-root results/processed/necessity_pilot/literature_methods/v4/12_full_rewrite_shards --continuation-root results/processed/necessity_pilot/literature_methods/v4/15_if_geo_continuation --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites --experiment-id literature_completed_rewrites_merge_v1",
+  "created_at": "2026-09-12T09:57:45.467129+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "9941c6a309330661d8ea441baf79f98c5882856711ed28733241244da9fc6740"
+}

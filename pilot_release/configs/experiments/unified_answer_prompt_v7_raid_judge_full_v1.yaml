@@ -1,0 +1,39 @@
+{
+  "experiment_id": "unified_answer_prompt_v7_raid_judge_full_v1",
+  "phase": "pilot_subjective_aggregation",
+  "dataset": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full/answers.jsonl + data/processed/necessity_pilot_v1/sample_manifest.jsonl + results/processed/necessity_pilot/unified_answer_prompt_v7/10_raid_subjective_judge_full_shards",
+  "method": "raid_g_eval_2_0_glm4_9b_deterministic_target_absence_zero_aggregate_v1",
+  "seed": "0,1,2",
+  "params": {
+    "source_shard_experiment_ids": [
+      "unified_answer_prompt_v7_raid_judge_shard_0_v1",
+      "unified_answer_prompt_v7_raid_judge_shard_1_v1",
+      "unified_answer_prompt_v7_raid_judge_shard_2_v1",
+      "unified_answer_prompt_v7_raid_judge_shard_3_v1"
+    ],
+    "answer_count": 39537,
+    "dimensions": 7,
+    "judge_seeds": [
+      0,
+      1,
+      2
+    ],
+    "expected_trials": 830277,
+    "expected_glm_trials": 441231,
+    "expected_deterministic_zero_trials": 389046,
+    "num_shards": 4,
+    "zero_when_target_not_cited": true,
+    "require_all_scores_parsed": true,
+    "gpu_required": false,
+    "overwrite_existing_results": false,
+    "create_branch": false,
+    "git_commit": false,
+    "estimated_cost_usd": 0.0
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/10_raid_subjective_judge_full",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/10_raid_subjective_judge_full/metrics.json",
+  "command": "conda run -n transfergeo python code/aggregate_raid_judge_shards.py --experiment-id unified_answer_prompt_v7_raid_judge_full_v1 --input results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full/answers.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --shards-root results/processed/necessity_pilot/unified_answer_prompt_v7/10_raid_subjective_judge_full_shards --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/10_raid_subjective_judge_full --num-shards 4 --seeds 0 1 2 --require-all-scores-parsed --zero-when-target-not-cited",
+  "created_at": "2026-09-04T11:54:52.623508+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "a627969ac37731202ecd181a411d8c5703c5195715fdf6dfe32058b264303fab"
+}

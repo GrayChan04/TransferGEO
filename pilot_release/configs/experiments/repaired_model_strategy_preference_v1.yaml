@@ -1,0 +1,14 @@
+{
+  "experiment_id": "repaired_model_strategy_preference_v1",
+  "phase": "pilot_analysis",
+  "dataset": "unified_answer_v7/repaired/39537",
+  "method": "descriptive_model_strategy_preference_v1",
+  "seed": 20260906,
+  "params": null,
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_model_strategy_preference_v1",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_model_strategy_preference_v1/metrics.json",
+  "command": "conda run -n transfergeo python code/analyze_model_strategy_preferences.py --experiment-id repaired_model_strategy_preference_v1 --objective-scores results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_citations_objective_scores_v1/objective_scores.jsonl --subjective-scores results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_scores_merged_v1/judge_scores.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_model_strategy_preference_v1 --models qwen llama mistral --seeds 0 1 2 --objective-policy zero_fallback_sensitivity --bootstrap-resamples 1000 --bootstrap-seed 20260906 --expected-score-count 39537 --expected-manifest-count 400 --expected-prompt-count 11 --expected-common-sample-count 397",
+  "created_at": "2026-09-09T08:24:23.536652+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "96e52257c0d1ecbc0e75ab7406c9da6cd8eca3136e9797e667abf5f6a8a812b6"
+}

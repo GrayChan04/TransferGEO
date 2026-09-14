@@ -1,0 +1,56 @@
+{
+  "experiment_id": "unified_answer_prompt_v7_generation_mistral_shard_v1",
+  "phase": "pilot_answer_shard",
+  "dataset": "data/processed/necessity_pilot_v1/sample_manifest.jsonl + results/processed/necessity_rewrite_stage_v1/rewrites.jsonl + frozen GEO-Bench/C-SEO source documents",
+  "method": "mistral_answer_model_shard_unified_answer_v7_v1",
+  "seed": 0,
+  "params": {
+    "parent_experiment_id": "unified_answer_prompt_v7_generation_full_v1",
+    "answer_prompt_protocol": "unified_answer_v7",
+    "model": "mistral",
+    "physical_gpus": [
+      0,
+      3
+    ],
+    "instance_count": 400,
+    "conditions_per_instance": 11,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "expected_generation_count": 13200,
+    "expected_successful_generation_count": 13137,
+    "expected_protocol_exclusion_count": 63,
+    "common_input_budget": 20480,
+    "max_new_tokens": 2048,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "use_official_chat_template": true,
+    "device_map_strategy": "balanced",
+    "checkpoint_granularity": "one_generation",
+    "resume": true,
+    "gpu_start_guard_max_preexisting_memory_mib": 1024,
+    "requires_no_preexisting_compute_process": true,
+    "gpu_safety_check_count": 2,
+    "modifies_existing_processes": false,
+    "allowed_error_types": [
+      "input_budget_overflow"
+    ],
+    "ordinary_condition_error_policy": "record_continue_unexpected_error_final_fail",
+    "infrastructure_error_policy": "stop_shard",
+    "citation_policy": "diagnostic_only_no_retry_repair_filter",
+    "local_model_no_api_cost": true,
+    "create_branch": false,
+    "git_commit": false,
+    "overwrite_existing_results": false
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full_shards/mistral",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full_shards/mistral/metrics.json",
+  "command": "conda run -n transfergeo python code/run_necessity_answer_single_model.py --experiment-id unified_answer_prompt_v7_generation_full_v1 --answer-prompt-protocol unified_answer_v7 --model mistral --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --rewrites results/processed/necessity_rewrite_stage_v1/rewrites.jsonl --model-root data/raw/models --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full_shards/mistral --seeds 0 1 2 --max-new-tokens 2048 --input-budget 20480 --allowed-error-types input_budget_overflow --gpus 0,3 --max-preexisting-memory-mib 1024 --resume",
+  "created_at": "2026-09-02T01:53:59+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "8875bc1ad041c9a6ce853afdf5904a289703299db239cbb7ad952e5112bbf2c5"
+}

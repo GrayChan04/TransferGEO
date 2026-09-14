@@ -1,0 +1,33 @@
+{
+  "experiment_id": "literature_answer_full_mistral_v1",
+  "phase": "pilot_answer_full",
+  "dataset": "literature_methods_v4_completed2789_original400_truncated16",
+  "method": "mistral_unified_v7_shared_truncation",
+  "seed": "0,1,2",
+  "params": {
+    "model": "mistral",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "expected_generations": 9567,
+    "input_budget": 20480,
+    "max_new_tokens": 2048,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "gpus": [
+      6,
+      7
+    ],
+    "source_truncation": "shared_source_prefix_v1",
+    "missing_rewrites": 11
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/20_answer_full/mistral",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/20_answer_full/mistral/metrics.json",
+  "command": "env CUDA_VISIBLE_DEVICES=6,7 conda run --no-capture-output -n transfergeo python code/run_necessity_answer_model_shard.py --experiment-id literature_answer_full_mistral_v1 --model mistral --rewrite-profile literature_methods --rewrites results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/realized_documents.jsonl --missing-rewrites results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/missing_rewrites.jsonl --source-truncations results/processed/necessity_pilot/literature_methods/v4/18_shared_source_truncation/source_truncations.jsonl --answer-prompt-protocol unified_answer_v7 --seeds 0 1 2 --max-new-tokens 2048 --input-budget 20480 --output-dir results/processed/necessity_pilot/literature_methods/v4/20_answer_full/mistral",
+  "created_at": "2026-09-12T10:07:02.112971+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "9f1f9b855b2b7e691f7fbf1d431bd5ce85ee1d2937f376c2e6bd7d56b33126f1"
+}

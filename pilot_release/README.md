@@ -1,6 +1,6 @@
 # TransferGEO pilot results
 
-This snapshot contains the two pilot tables, manuscript findings, numerical summaries, original prompt-family templates (v12), the shared answer-generation prompt (v7), and the shared statistical implementation. It is a reporting snapshot, not an end-to-end generation release.
+This snapshot contains the two pilot tables, manuscript findings, numerical summaries, original prompt-family templates (v12), the shared answer-generation prompt (v7), and the shared statistical implementation. The code supplement adds generation/scoring modules, historical configurations, dependency declarations and tests. See [RUNNING.md](RUNNING.md) for execution entry points and required external inputs. It is not a complete end-to-end data release.
 
 ## Contents
 
@@ -36,9 +36,10 @@ From this directory:
 
 ```bash
 sha256sum -c SHA256SUMS
-python -m unittest discover -s tests -p 'test_*.py'
+python -m unittest discover -s tests -p 'test_public_package.py'
+python -m unittest discover -s tests -p 'test_normalized_improvement_pilots.py'
 ```
 
-The tests require only Python's standard library and do not load a model. Include the findings section and both table files in your LaTeX manuscript using `booktabs`, `graphicx`, and `amsmath`. No PDF compilation is claimed for this snapshot.
+The two checks above require only Python's standard library and do not load a model. Other historical tests may require non-distributed inputs; do not assume blanket discovery will pass. Include the findings section and both table files in your LaTeX manuscript using `booktabs`, `graphicx`, and `amsmath`. No PDF compilation is claimed for this snapshot.
 
 The analysis modules require paired per-answer objective/subjective score files and a selection configuration to regenerate results; these files are not included here. This package is therefore not sufficient to reproduce generation or scoring from scratch. Raw benchmark text, answers, large scoring outputs, model weights, PDFs, private records, and third-party method/judge prompt copies pending redistribution review remain local. The original local evidence is preserved.

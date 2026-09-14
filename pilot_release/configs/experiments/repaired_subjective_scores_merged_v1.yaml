@@ -1,0 +1,14 @@
+{
+  "experiment_id": "repaired_subjective_scores_merged_v1",
+  "phase": "pilot_subjective_merge",
+  "dataset": "unified_answer_v7/repaired/39537",
+  "method": "raid_subjective_repaired_merge_v1",
+  "seed": 0,
+  "params": null,
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_scores_merged_v1",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_scores_merged_v1/metrics.json",
+  "command": "conda run -n transfergeo python code/merge_canonicalized_raid_judge_scores.py --experiment-id repaired_subjective_scores_merged_v1 --canonicalized-answers results/processed/necessity_pilot/unified_answer_prompt_v7/detached_citation_repair_v1/canonicalized_answers.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --alignment-manifest results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_alignment_plan_v1/answer_alignment.jsonl --old-judge-trials results/processed/necessity_pilot/unified_answer_prompt_v7/17_raid_subjective_judge_canonicalized_v3/judge_trials.jsonl --rerun-shards-root results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_judge_rerun_v1 --num-rerun-shards 1 --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_scores_merged_v1 --seeds 0 1 2 --expected-answer-count 39537 --expected-trial-count 830277 --expected-reuse-trial-count 459228 --expected-rerun-trial-count 1554 --expected-zero-trial-count 369495 --source-old-experiment-id unified_answer_prompt_v7_raid_judge_canonicalized_v3_full_v1 --source-rerun-experiment-id repaired_subjective_judge_rerun_v1",
+  "created_at": "2026-09-09T08:23:46.116465+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "d6b975f6138de510298dc8372184c9a157760cc112e665925df2288e8656993e"
+}

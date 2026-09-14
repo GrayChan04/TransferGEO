@@ -1,0 +1,47 @@
+{
+  "experiment_id": "unified_answer_prompt_v7_generation_aggregation_v1",
+  "phase": "pilot_answer_aggregation",
+  "dataset": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full_shards + data/processed/necessity_pilot_v1/sample_manifest.jsonl",
+  "method": "deterministic_answer_shard_aggregation_v1",
+  "seed": 0,
+  "params": {
+    "parent_experiment_id": "unified_answer_prompt_v7_generation_full_v1",
+    "answer_prompt_protocol": "unified_answer_v7",
+    "models": [
+      "qwen",
+      "llama",
+      "mistral"
+    ],
+    "instance_count": 400,
+    "prompt_condition_count": 11,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "expected_generation_count": 39600,
+    "expected_successful_answer_count": 39537,
+    "expected_protocol_exclusion_count": 63,
+    "allowed_error_types": [
+      "input_budget_overflow"
+    ],
+    "require_complete_accounting": true,
+    "require_no_duplicate_keys": true,
+    "require_no_success_error_overlap": true,
+    "require_citation_diagnostics_present": true,
+    "raw_answers_modified": false,
+    "answers_retried": false,
+    "answers_filtered": false,
+    "gpu_required": false,
+    "failure_policy": "stop_on_any_integrity_failure_or_unexpected_error",
+    "create_branch": false,
+    "git_commit": false,
+    "overwrite_existing_results": false
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full/metrics.json",
+  "command": "conda run -n transfergeo python code/aggregate_necessity_answer_shards.py --experiment-id unified_answer_prompt_v7_generation_full_v1 --answer-prompt-protocol unified_answer_v7 --shards-root results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full_shards --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full --seeds 0 1 2 --allowed-error-types input_budget_overflow",
+  "created_at": "2026-09-04T02:09:59+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "6b264e2f23f81590086301a5ae3587f66a777aae00dfcbf29b5a0c1b32d3a468"
+}

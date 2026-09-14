@@ -1,0 +1,23 @@
+{
+  "experiment_id": "necessity_rewrite_stage_v1",
+  "phase": "pilot_rewrite",
+  "dataset": "data/processed/necessity_pilot_v1/sample_manifest.jsonl",
+  "method": "frozen_v12_rewriter_realized_texts",
+  "seed": 0,
+  "params": {
+    "prompt_catalog_version": 12,
+    "conditions_per_instance": 10,
+    "rewriter": "ZhipuAI/GLM-4-9B-0414",
+    "query_visible_to_rewriter": false,
+    "dtype": "bfloat16",
+    "device_map_strategy": "balanced",
+    "failure_policy": "record_and_continue_condition_stop_on_infrastructure",
+    "create_branch": false,
+    "git_commit": false
+  },
+  "output_dir": "results/processed/necessity_rewrite_stage_v1",
+  "metrics_path": "results/processed/necessity_rewrite_stage_v1/metrics.json",
+  "command": "conda run -n transfergeo env CUDA_VISIBLE_DEVICES=0,1 python code/run_necessity_rewrite_stage.py --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_rewrite_stage_v1 --seed 0",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "17bd7c8d24b0ee156322e538fc7c85ab2380f147a2275804ec654d991ac47650"
+}

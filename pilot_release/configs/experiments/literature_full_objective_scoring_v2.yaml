@@ -1,0 +1,18 @@
+{
+  "experiment_id": "literature_full_objective_scoring_v2",
+  "phase": "pilot_scoring",
+  "dataset": "literature_answer_v4_shared_truncation28701",
+  "method": "canonicalization_v3_successive_tail_fix_geo_zero",
+  "seed": 0,
+  "params": {
+    "answer_count": 28701,
+    "gpu_calls": 0,
+    "primary_score_field": "zero_fallback_sensitivity.overall"
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/21_objective_scoring_fixed_tail",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/21_objective_scoring_fixed_tail/metrics.json",
+  "command": "conda run --no-capture-output -n transfergeo python code/score_literature_answers_full.py --experiment-id literature_full_objective_scoring_v2 --answers-root results/processed/necessity_pilot/literature_methods/v4/20_answer_full --rewrites results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/realized_documents.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/literature_methods/v4/21_objective_scoring_fixed_tail",
+  "created_at": "2026-09-13T11:16:10.858524+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "d152514a6dad5f844abf34661cb8acef25aed9ab6681bf4315107538de7efe50"
+}

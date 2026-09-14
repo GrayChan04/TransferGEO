@@ -1,0 +1,2 @@
+# Minimal data-reading dependency for benchmark audits.
+pyarrow==25.0.0

@@ -1,0 +1,24 @@
+{
+  "experiment_id": "literature_shared_source_truncation_v1",
+  "phase": "pilot_input_truncation",
+  "dataset": "literature_methods_v4_completed2789_original400",
+  "method": "shared_source_prefix_truncation_v1",
+  "seed": 0,
+  "params": {
+    "input_budget": 20480,
+    "changed_conditions": 16,
+    "models": [
+      "qwen",
+      "llama",
+      "mistral"
+    ],
+    "binary_search_iterations": 14,
+    "same_text_across_models": true
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/18_shared_source_truncation",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/18_shared_source_truncation/metrics.json",
+  "command": "conda run --no-capture-output -n transfergeo python code/prepare_shared_source_truncations.py --rewrites results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/realized_documents.jsonl --missing-rewrites results/processed/necessity_pilot/literature_methods/v4/16_completed_rewrites/missing_rewrites.jsonl --overflows results/processed/necessity_pilot/literature_methods/v4/17_full_answer_length_audit/overflows.jsonl --output-dir results/processed/necessity_pilot/literature_methods/v4/18_shared_source_truncation --experiment-id literature_shared_source_truncation_v1",
+  "created_at": "2026-09-12T10:04:31.696660+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "baedea01e277765de2190ac6c8cb2cc6082ebcb4c8ea1854cde4a80d22f1969c"
+}

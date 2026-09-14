@@ -1,0 +1,14 @@
+{
+  "experiment_id": "detached_citation_repair_v1",
+  "phase": "diagnostic_cpu",
+  "dataset": "unified_answer_v7/remaining_reference_tail_cleanup_v1/39537",
+  "method": "detached_citation_repair_v1",
+  "seed": 0,
+  "params": null,
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/detached_citation_repair_v1",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/detached_citation_repair_v1/metrics.json",
+  "command": "conda run -n transfergeo python code/repair_detached_citations.py --experiment-id detached_citation_repair_v1 --input results/processed/necessity_pilot/unified_answer_prompt_v7/remaining_reference_tail_cleanup_v1/canonicalized_answers.jsonl --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/detached_citation_repair_v1",
+  "created_at": "2026-09-09T08:07:44.102607+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "ecb076ac8dbf3cc436ddafc50d8587d7d2e2c6eddd9227edfd653dbe99e16788"
+}

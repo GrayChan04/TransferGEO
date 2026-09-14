@@ -1,0 +1,14 @@
+{
+  "experiment_id": "remaining_reference_tail_cleanup_v1",
+  "phase": "diagnostic_cpu",
+  "dataset": "unified_answer_v7/canonicalized_v3/39537",
+  "method": "reference_tail_cleanup_v1",
+  "seed": 0,
+  "params": null,
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/remaining_reference_tail_cleanup_v1",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/remaining_reference_tail_cleanup_v1/metrics.json",
+  "command": "conda run -n transfergeo python code/clean_remaining_reference_lists.py --experiment-id remaining_reference_tail_cleanup_v1 --input results/processed/necessity_pilot/unified_answer_prompt_v7/13_citation_canonicalization_audit_v3/canonicalized_answers.jsonl --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/remaining_reference_tail_cleanup_v1",
+  "created_at": "2026-09-09T07:53:19.715731+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "4def65de57051970ccb2f20c3eeb8157e9f3e4a1331bdff1d13c956fbddc0321"
+}

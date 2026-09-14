@@ -1,0 +1,17 @@
+{
+  "part1": {
+    "objective": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_citations_objective_scores_v1/objective_scores.jsonl",
+    "subjective": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_subjective_scores_merged_v1/judge_scores.jsonl",
+    "previous_units": "results/processed/necessity_pilot/unified_answer_prompt_v7/repaired_model_strategy_preference_v1/seed_averaged_scores.csv",
+    "expected_count": 39537,
+    "expected_methods": 11,
+    "selection": "common_complete"
+  },
+  "part2": {
+    "objective": "results/processed/necessity_pilot/literature_methods/v4/21_objective_scoring_fixed_tail/04_objective_scores/objective_scores.jsonl",
+    "subjective": "results/processed/necessity_pilot/literature_methods/v4/23_subjective_aggregation/judge_scores.jsonl",
+    "expected_count": 28701,
+    "expected_methods": 8,
+    "selection": "all_available_paired"
+  }
+}

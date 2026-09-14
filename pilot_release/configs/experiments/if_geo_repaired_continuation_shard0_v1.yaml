@@ -1,0 +1,32 @@
+{
+  "experiment_id": "if_geo_repaired_continuation_shard0_v1",
+  "phase": "pilot_rewrite_continuation",
+  "dataset": "literature_methods_v4_repaired18",
+  "method": "if_geo_saved_stage_replay_v1",
+  "seed": 0,
+  "params": {
+    "shard_index": 0,
+    "num_shards": 4,
+    "expected_conditions": 5,
+    "maximum_new_calls": 10,
+    "reused_calls": 40,
+    "do_sample": false,
+    "seed": 0,
+    "model": "ZhipuAI/GLM-4-9B-0414",
+    "gpus": [
+      0,
+      1
+    ],
+    "intermediate_max_new_tokens": 2048,
+    "if_geo_aggregation_max_new_tokens": 8192,
+    "rewrite_growth_ratio": 2.0,
+    "rewrite_growth_slack_tokens": 256,
+    "retry": false
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/15_if_geo_continuation/shard0",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/15_if_geo_continuation/shard0/metrics.json",
+  "command": "env CUDA_VISIBLE_DEVICES=0,1 conda run --no-capture-output -n transfergeo python code/continue_if_geo_repaired_stages.py --repairs results/processed/necessity_pilot/literature_methods/v4/14_if_geo_json_repair/repaired_stage_outputs.jsonl --shard-index 0 --num-shards 4 --output-dir results/processed/necessity_pilot/literature_methods/v4/15_if_geo_continuation/shard0 --experiment-id if_geo_repaired_continuation_shard0_v1 --model-root data/raw/models",
+  "created_at": "2026-09-12T06:20:51.291060+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "7f738093ed74bb8c6148b6d3ff4dcb82fab7f266fe794463da6e349a4c16e7de"
+}

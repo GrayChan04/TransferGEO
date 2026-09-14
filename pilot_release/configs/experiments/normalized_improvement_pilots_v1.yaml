@@ -1,0 +1,23 @@
+{
+  "experiment_id": "normalized_improvement_pilots_v1",
+  "phase": "pilot_analysis",
+  "dataset": "prompt_family/repaired/39537+literature/v4/28701",
+  "method": "normalized_improvement_shared_paired_seed_v1",
+  "seed": 0,
+  "params": {
+    "formula": "10*(after-before)/(before+1)",
+    "answer_seeds": [
+      0,
+      1,
+      2
+    ],
+    "aggregation": "paired_seed_then_sample_then_benchmark",
+    "inference_tests": false
+  },
+  "output_dir": "results/processed/necessity_pilot/normalized_improvement_pilots_v1",
+  "metrics_path": "results/processed/necessity_pilot/normalized_improvement_pilots_v1/metrics.json",
+  "command": "conda run -n transfergeo python code/normalized_improvement_pilots.py --spec configs/normalized_improvement_pilots_v1.json --output-dir results/processed/necessity_pilot/normalized_improvement_pilots_v1",
+  "created_at": "2026-09-14T03:07:25.413851+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "c110190efacf81a0d6a40a32abe33dc8b9482b9d44b1b0b0a37b62d44f76bb0b"
+}

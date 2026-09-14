@@ -1,0 +1,44 @@
+{
+  "judge_id": "raid_subjective_judge_v1",
+  "model": "ZhipuAI/GLM-4-9B-0414",
+  "model_path": "data/raw/models/GLM-4-9B-0414",
+  "prompt_root": "prompts/evaluation/raid",
+  "dimensions": [
+    "diversity_detailed",
+    "follow_detailed",
+    "influence_detailed",
+    "relevance_detailed",
+    "subjcount_detailed",
+    "subjpos_detailed",
+    "uniqueness_detailed"
+  ],
+  "input_fields": [
+    "query",
+    "answer"
+  ],
+  "output_format": "extract_concrete_score_integer",
+  "score_range": [
+    0,
+    5
+  ],
+  "score_normalization": "extract_explicit_or_unambiguous_score_then_store_integer",
+  "invalid_output_policy": "reject_only_missing_or_conflicting_score",
+  "target_presence_format": "exact_separate_square_bracket_index",
+  "target_absence_policy": "exact_target_citation_absent_assign_zero_without_llm",
+  "repetitions": 3,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "decoding": {
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_new_tokens": 16,
+    "dtype": "bfloat16",
+    "device_map_strategy": "balanced"
+  },
+  "failure_policy": "preserve_raw_output_and_mark_unscorable",
+  "release_note": "Supply RAID prompts locally. Score extraction and missing-target zero rules unchanged. Unquoted historical narrative omitted."
+}

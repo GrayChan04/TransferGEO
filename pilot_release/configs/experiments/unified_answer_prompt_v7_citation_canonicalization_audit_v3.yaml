@@ -1,0 +1,41 @@
+{
+  "experiment_id": "unified_answer_prompt_v7_citation_canonicalization_audit_v3",
+  "phase": "diagnostic_cpu",
+  "dataset": "v7 answers: results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full/answers.jsonl; manifest: data/processed/necessity_pilot_v1/sample_manifest.jsonl",
+  "method": "deterministic_citation_canonicalization_v3",
+  "seed": 0,
+  "params": {
+    "answer_prompt_protocol": "unified_answer_v7",
+    "expected_answer_count": 39537,
+    "models": [
+      "qwen",
+      "llama",
+      "mistral"
+    ],
+    "split_combined_and_range_citations": true,
+    "deduplicate_within_cluster": true,
+    "remove_invalid_or_out_of_range_labels_from_scoring_copy": true,
+    "move_post_punctuation_citations_before_sentence_punctuation": true,
+    "normalize_named_source_labels_without_deleting_grammatical_source_words": true,
+    "remove_explicit_or_separated_trailing_reference_lists": true,
+    "remove_explicit_unused_sources_notes": true,
+    "remove_orphaned_spaces_from_invalid_label_removal": true,
+    "preserve_raw_answers": true,
+    "require_idempotence": true,
+    "ambiguous_format_policy": "record_and_continue",
+    "structural_integrity_error_policy": "stop",
+    "gpu_required": false,
+    "objective_rescore": false,
+    "subjective_rescore": false,
+    "create_git_branch": false,
+    "git_commit": false,
+    "overwrite": false,
+    "supersedes_experiment": "unified_answer_prompt_v7_citation_canonicalization_audit_v2"
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/13_citation_canonicalization_audit_v3",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/13_citation_canonicalization_audit_v3/metrics.json",
+  "command": "conda run -n transfergeo python code/audit_citation_canonicalization.py --experiment-id unified_answer_prompt_v7_citation_canonicalization_audit_v3 --answers results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full/answers.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/13_citation_canonicalization_audit_v3 --answer-prompt-protocol unified_answer_v7 --method-version deterministic_citation_canonicalization_v3 --expected-answer-count 39537 --models qwen llama mistral",
+  "created_at": "2026-09-05T10:09:11.025115+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "40b4b16be21e4b45c76bd9ffabd2487870f8ea6deeed0618eea677fd9ffb0039"
+}

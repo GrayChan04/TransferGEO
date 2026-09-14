@@ -1,0 +1,22 @@
+{
+  "experiment_id": "literature_full_subjective_aggregation_v1",
+  "phase": "pilot_subjective_aggregation",
+  "dataset": "literature_methods/v4/28701",
+  "method": "raid_seven_dimensions_three_repeats_aggregation_v1",
+  "seed": 0,
+  "params": {
+    "judge_seeds": [
+      0,
+      1,
+      2
+    ],
+    "num_shards": 4,
+    "zero_when_target_not_cited": true
+  },
+  "output_dir": "results/processed/necessity_pilot/literature_methods/v4/23_subjective_aggregation",
+  "metrics_path": "results/processed/necessity_pilot/literature_methods/v4/23_subjective_aggregation/metrics.json",
+  "command": "conda run -n transfergeo python code/aggregate_raid_judge_shards.py --experiment-id literature_full_subjective_aggregation_v1 --input results/processed/necessity_pilot/literature_methods/v4/21_objective_scoring_fixed_tail/03_detached_citation_repair/canonicalized_answers.jsonl --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --shards-root results/processed/necessity_pilot/literature_methods/v4/22_subjective_judge --shard-dir-pattern shard{index} --output-dir results/processed/necessity_pilot/literature_methods/v4/23_subjective_aggregation --num-shards 4 --seeds 0 1 2 --require-all-scores-parsed --zero-when-target-not-cited",
+  "created_at": "2026-09-14T02:11:41.246011+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "c3391aa8a73ce41251c7ffb9a1ab164993d4f36df7a8fa403a7eea9796572d2b"
+}

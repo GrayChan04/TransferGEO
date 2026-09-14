@@ -1,0 +1,74 @@
+{
+  "experiment_id": "unified_answer_prompt_v7_generation_full_v1",
+  "phase": "pilot_answer",
+  "dataset": "data/processed/necessity_pilot_v1/sample_manifest.jsonl + results/processed/necessity_rewrite_stage_v1/rewrites.jsonl + frozen GEO-Bench/C-SEO source documents",
+  "method": "prompt_variant_answer_model_matrix_unified_answer_v7_diagnostic_citations_v1",
+  "seed": 0,
+  "params": {
+    "answer_prompt_protocol": "unified_answer_v7",
+    "prompt_files": {
+      "system": "prompts/answer_generation/unified_v7/system_prompt.txt",
+      "user": "prompts/answer_generation/unified_v7/user_prompt.txt"
+    },
+    "answer_models": [
+      "qwen",
+      "llama",
+      "mistral"
+    ],
+    "conditions_per_instance": 11,
+    "instance_count": 400,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "expected_generation_count": 39600,
+    "expected_input_budget_overflow_count": 63,
+    "common_input_budget": 20480,
+    "max_new_tokens": 2048,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "use_official_chat_template": true,
+    "device_map_strategy": "balanced",
+    "execution_topology": {
+      "qwen": [
+        0,
+        1
+      ],
+      "llama": [
+        2,
+        3
+      ],
+      "mistral": [
+        4,
+        5
+      ]
+    },
+    "parallel_models": true,
+    "checkpoint_granularity": "one_generation",
+    "resume": true,
+    "shards_root": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full_shards",
+    "gpu_start_guard_max_preexisting_memory_mib": 1024,
+    "requires_no_preexisting_compute_process": true,
+    "modifies_existing_processes": false,
+    "allowed_error_types": [
+      "input_budget_overflow"
+    ],
+    "ordinary_condition_error_policy": "record_continue_final_fail",
+    "infrastructure_error_policy": "stop_relevant_shard",
+    "citation_policy": "diagnostic_only_no_retry_repair_filter",
+    "sensitivity_excluded_sample_count": 3,
+    "sensitivity_excluded_position_count": 297,
+    "create_branch": false,
+    "git_commit": false,
+    "overwrite_existing_results": false
+  },
+  "output_dir": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full",
+  "metrics_path": "results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full/metrics.json",
+  "command": "conda run -n transfergeo python code/run_necessity_answer_parallel.py --experiment-id unified_answer_prompt_v7_generation_full_v1 --answer-prompt-protocol unified_answer_v7 --manifest data/processed/necessity_pilot_v1/sample_manifest.jsonl --rewrites results/processed/necessity_rewrite_stage_v1/rewrites.jsonl --model-root data/raw/models --shards-root results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full_shards --output-dir results/processed/necessity_pilot/unified_answer_prompt_v7/03_answer_generation_full --seeds 0 1 2 --max-new-tokens 2048 --input-budget 20480 --qwen-gpus 0,1 --llama-gpus 2,3 --mistral-gpus 4,5 --max-preexisting-memory-mib 1024 --allowed-error-types input_budget_overflow --resume",
+  "created_at": "2026-08-31T02:17:23.202383+00:00",
+  "release_note": "Historical configuration; review existing outputs and GPU assignments before reuse. External inputs are not distributed.",
+  "source_config_sha256": "de24e91ca0cb8910302a038b8d78f5fd67016f516cf1fff2b8db1318c28f2bea"
+}
