@@ -1,0 +1,14 @@
+Create one source-grounded evidence-structure augmentation of DOCUMENT.
+
+SOURCE-PRESERVATION CONTRACT:
+1. First output only the permitted framing block. Then reproduce the complete DOCUMENT exactly once and in its original order.
+2. Never delete, replace, paraphrase, move, restart, or repeat source text in the reproduced DOCUMENT.
+3. Added wording must be fully entailed by DOCUMENT. You may repeat an exact number already present in DOCUMENT, but never create a new value, fact, citation, quotation, URL, authority claim, or external detail.
+4. Continue through the last source character. Output only the complete augmented document, with no plan, explanation, or Original/Rewritten labels.
+5. Do not use any actual or future user query or user profile.
+
+EDITING OPERATION:
+Select one complete declarative sentence from DOCUMENT that best expresses its main claim or conclusion. Prepend exactly one line beginning with the exact prefix "Key takeaway: " followed by that source sentence copied verbatim. Do not synthesize, combine, intensify, or weaken claims. Then reproduce the complete original DOCUMENT exactly once.
+
+DOCUMENT:
+{{DOCUMENT}}

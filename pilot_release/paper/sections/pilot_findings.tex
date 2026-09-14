@@ -1,0 +1,79 @@
+% Insert after the pilot setup and metric definitions.
+% Evidence: normalized_improvement_pilots_v1; no new experiments.
+% Include the two normalized-improvement table files for cross-references.
+\subsection{Pilot Findings and Motivation}
+\label{sec:pilot-findings}
+
+\paragraph{Reporting convention.}
+Both pilots use the same normalized improvement score:
+\begin{equation}
+  \bar I = \frac{1}{N}\sum_{i=1}^{N}\frac{1}{3}\sum_{s=0}^{2}
+  \frac{10\bigl(S^{\mathrm{opt}}_{i,s}-S^{\mathrm{orig}}_{i,s}\bigr)}
+       {S^{\mathrm{orig}}_{i,s}+1}.
+  \label{eq:pilot-normalized-improvement}
+\end{equation}
+For each model and strategy, we first compute improvement for matched
+instance--answer-seed pairs, average over three seeds within each instance,
+and then average over the $N$ available instances in each benchmark.
+Objective uses zero-fallback GEO Overall (base scores 0--1), and Subjective
+uses the RAID seven-dimension average (base scores 0--5).
+Normalized improvement scores are not percentages and need not lie within
+these base-score ranges. Zero Original scores are retained under the same
+formula. Boldface denotes the highest mean in the stated candidate set,
+not statistical significance.
+
+\paragraph{Prompt-family pilot.}
+Table~\ref{tab:necessity-part1-normalized-improvement}
+shows that the relative ordering of some optimization prompts varies across
+answer models. On GEO-Bench, Conclusion-First achieves a larger objective
+normalized improvement score than Hierarchical Framing on Qwen
+(0.0794 versus 0.0191), whereas Hierarchical Framing scores higher on
+Llama (0.1131 versus 0.0800) and Mistral (0.3397 versus 0.1647).
+The corresponding subjective scores exhibit the same ordering reversal:
+2.5574 versus 1.7545 on Qwen, 2.2818 versus 1.9225 in favor of
+Hierarchical Framing on Llama, and 3.6535 versus 2.3297 on Mistral.
+These local differences coexist with a shared highest-scoring strategy.
+Key-Point Enumeration achieves the highest mean among the nine optimization
+prompts for both metrics, all three models, and both benchmarks.
+
+\paragraph{Literature-method pilot.}
+Table~\ref{tab:necessity-part2-normalized-improvement}
+shows analogous differences for literature-derived methods under our
+experimental configuration. On C-SEO Bench, Statistics Addition exceeds
+Content Improvement in objective normalized improvement on Qwen
+(0.1228 versus 0.0230). The ordering reverses on Llama
+(0.2663 versus 0.0577 in favor of Content Improvement) and Mistral
+(0.2610 versus 0.0987). Nevertheless, LLM Guidance attains the highest
+mean among the five fixed methods for every model, benchmark, and metric.
+We report RAID-GSEO and IF-GEO separately from this fixed-method comparison
+because their multi-step procedures have different computational budgets.
+IF-GEO additionally has incomplete sample coverage, so its reported means
+describe successful rewrites and their matched Original conditions.
+
+\paragraph{Implications for model-specific adaptation.}
+Together, the two pilots provide descriptive evidence that the relative
+effectiveness of a given GEO strategy can depend on the downstream answer
+model. This observation motivates studying whether a given optimization
+prompt can be adapted to improve its effectiveness on a target model.
+The pilots do not establish that adaptation is necessary or that a
+model-specific strategy outperforms a strong fixed alternative.
+Indeed, the shared highest-scoring fixed strategies in both candidate sets
+provide important counterpoints to that stronger claim. Demonstrating the
+value of adaptation requires comparisons against direct application of
+the original strategy and strong fixed-strategy baselines.
+
+\paragraph{Scope of interpretation.}
+These are descriptive comparisons of mean normalized improvement scores,
+not tests of statistical significance or transfer performance. Both pilots
+use the same paired-seed computation and aggregation procedure. Their
+available sample sets differ, and source-prefix truncation affects
+16 conditions in the literature-method pilot. The shared GLM rewriter
+checkpoint does not imply identical generation implementations across
+the two runs, including their end-of-sequence handling. These differences
+limit direct cross-pilot comparisons and attribution solely to rewriting.
+Furthermore, normalized improvement weights changes by the Original score:
+a positive mean does not necessarily imply an increase in mean absolute
+visibility, and stochastic variation can contribute to positive values.
+We therefore retain the Original and Neutral Rewrite controls where
+available, together with the underlying visibility scores, when interpreting
+the observed gains.

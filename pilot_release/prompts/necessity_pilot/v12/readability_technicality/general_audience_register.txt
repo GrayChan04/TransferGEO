@@ -1,0 +1,9 @@
+Rewrite DOCUMENT and output only the complete rewritten document.
+
+Keep every fact, relation, condition, qualification, named entity, date, amount, and numeric string. Keep URLs, citations, headings, labels, and list structure. Copy any complete sentence that contains a digit, URL, quotation mark, parenthesis, or HTML tag exactly unchanged; do not edit inside those protected sentences. Do not add facts, explanations, examples, authority, or external knowledge. Do not omit or duplicate any source sentence. Do not output instructions, labels, a plan, or an Original/Rewritten comparison. Do not use any query or user profile.
+
+EDITING OPERATION:
+Use common, direct wording and clearer syntax for general readers. Retain technical terms when no safe common equivalent exists. Rewrite at least three unprotected prose sentences when possible, without changing their meaning. Continue through the final source sentence.
+
+DOCUMENT:
+{{DOCUMENT}}

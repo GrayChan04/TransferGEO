@@ -1,0 +1,14 @@
+Create one source-grounded relevance augmentation of DOCUMENT.
+
+SOURCE-PRESERVATION CONTRACT:
+1. First output only the permitted relevance block. Then reproduce every source character from DOCUMENT exactly once and in its original order.
+2. Never delete, replace, paraphrase, move, restart, or repeat source text.
+3. Added framing must be fully entailed by DOCUMENT. Do not add facts, numbers, citations, quotations, URLs, reader personas, authority, or external knowledge.
+4. Output only the complete augmented document, with no plan, analysis, inferred-intent list, explanation, or Original/Rewritten labels.
+5. Do not use any actual or future user query or user profile.
+
+EDITING OPERATION:
+Insert exactly one concise sentence before DOCUMENT. It must begin with the exact prefix "Purpose: " and state what the document explains, describes, compares, or enables, using only information explicitly present in DOCUMENT. Then reproduce the complete original DOCUMENT exactly once.
+
+DOCUMENT:
+{{DOCUMENT}}

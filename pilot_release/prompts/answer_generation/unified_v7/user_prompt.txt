@@ -1,0 +1,22 @@
+### Input
+Query: {query}
+
+Source Contents:
+{sources}
+
+### Mandatory citation and output-format contract
+The only valid citation identifiers for this input are:
+{valid_citation_identifiers}
+
+- Each input header `Source k:` has one fixed and permanent mapping to `[k]`. Never renumber sources or assign a different meaning to any identifier
+- Return only one concise answer paragraph and start directly with the answer
+- Every sentence must express one main claim and end with at least one valid citation immediately before the sentence-final punctuation. Use only the canonical forms `A supported sentence [k].` or `A jointly supported sentence [k][j].`
+- Prefer one supporting source per sentence. If different parts of a compound sentence need different sources, split them into separate complete sentences with their own citations
+- Do not output any uncited sentence, including an introduction, transition, limitation, recommendation, or conclusion
+- Do not output headings, lists, labels, fragments, tables, source names used as citation markers, or forms such as `(Source 2)`, `[Source 2]`, `[1,2]`, or `[1-2]`
+- Do not output a separate References, Sources, Citations, or Bibliography section, and do not restate any citation-to-source mapping
+- If no provided source fully supports a drafted sentence, split it into supported sentences, rewrite it to remove unsupported information, or omit it
+- Before returning the answer, silently verify that every sentence ends in a valid citation from the identifier list above and that every identifier still refers to its original `Source k:` header. Output only the verified answer
+
+### Output
+Answer:

@@ -1,0 +1,100 @@
+{
+  "catalog_id": "transfergeo_necessity_pilot_prompts_v12",
+  "catalog_version": 12,
+  "language": "English",
+  "rewriter_model_id": "ZhipuAI/GLM-4-9B-0414",
+  "runtime_message_role": "user",
+  "document_placeholder": "{{DOCUMENT}}",
+  "decoding": {
+    "do_sample": false,
+    "generations_per_document_variant": 1,
+    "silent_retry": false
+  },
+  "original_no_rewrite": {
+    "calls_rewriter": false,
+    "selection_eligible": false,
+    "prompt_path": null
+  },
+  "prompts": [
+    {
+      "prompt_id": "neutral_rewrite_control.neutral_rewrite_control",
+      "category_name": "Neutral Rewrite Control",
+      "variant_name": "Neutral Rewrite Control",
+      "path": "neutral_rewrite_control/neutral_rewrite_control.txt",
+      "shared_shell_group": "Evidence-Structure Rewriting",
+      "selection_eligible": false
+    },
+    {
+      "prompt_id": "evidence_structure_rewriting.conclusion_first",
+      "category_name": "Evidence-Structure Rewriting",
+      "variant_name": "Conclusion-First",
+      "path": "evidence_structure_rewriting/conclusion_first.txt",
+      "shared_shell_group": "Evidence-Structure Rewriting",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "evidence_structure_rewriting.key_point_enumeration",
+      "category_name": "Evidence-Structure Rewriting",
+      "variant_name": "Key-Point Enumeration",
+      "path": "evidence_structure_rewriting/key_point_enumeration.txt",
+      "shared_shell_group": "Evidence-Structure Rewriting",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "evidence_structure_rewriting.hierarchical_framing",
+      "category_name": "Evidence-Structure Rewriting",
+      "variant_name": "Hierarchical Framing",
+      "path": "evidence_structure_rewriting/hierarchical_framing.txt",
+      "shared_shell_group": "Evidence-Structure Rewriting",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "latent_intent_coverage.explicit_purpose",
+      "category_name": "Latent-Intent Coverage",
+      "variant_name": "Explicit Purpose",
+      "path": "latent_intent_coverage/explicit_purpose.txt",
+      "shared_shell_group": "Latent-Intent Coverage",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "latent_intent_coverage.single_latent_intent",
+      "category_name": "Latent-Intent Coverage",
+      "variant_name": "Single Latent Intent",
+      "path": "latent_intent_coverage/single_latent_intent.txt",
+      "shared_shell_group": "Latent-Intent Coverage",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "latent_intent_coverage.multiple_latent_intents",
+      "category_name": "Latent-Intent Coverage",
+      "variant_name": "Multiple Latent Intents",
+      "path": "latent_intent_coverage/multiple_latent_intents.txt",
+      "shared_shell_group": "Latent-Intent Coverage",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "readability_technicality.general_audience_register",
+      "category_name": "Readability-Technicality",
+      "variant_name": "General-Audience Register",
+      "path": "readability_technicality/general_audience_register.txt",
+      "shared_shell_group": "Readability-Technicality",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "readability_technicality.mixed_audience_register",
+      "category_name": "Readability-Technicality",
+      "variant_name": "Mixed-Audience Register",
+      "path": "readability_technicality/mixed_audience_register.txt",
+      "shared_shell_group": "Readability-Technicality",
+      "selection_eligible": true
+    },
+    {
+      "prompt_id": "readability_technicality.specialist_register",
+      "category_name": "Readability-Technicality",
+      "variant_name": "Specialist Register",
+      "path": "readability_technicality/specialist_register.txt",
+      "shared_shell_group": "Readability-Technicality",
+      "selection_eligible": true
+    }
+  ]
+}

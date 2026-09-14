@@ -1,0 +1,76 @@
+% Shared analysis: normalized_improvement_pilots_v1.
+% One table with two benchmark panels; original scores are unchanged.
+% Required packages: booktabs, graphicx.
+\begin{table*}[t]
+  \centering
+  \caption{Prompt-family pilot on GEO-Bench (200 instances) and C-SEO Bench (197 instances). Cells report objective and subjective normalized improvement scores as defined in Eq.~\ref{eq:pilot-normalized-improvement}; higher is better. Bold marks the highest mean among the nine optimization prompts for each benchmark, model, and metric, excluding Original and Neutral Rewrite.}
+  \label{tab:necessity-part1-normalized-improvement}
+  \scriptsize
+  \setlength{\tabcolsep}{3.2pt}
+  \renewcommand{\arraystretch}{1.08}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{llcccccc}
+      \toprule
+      & & \multicolumn{2}{c}{Qwen3.5-9B} & \multicolumn{2}{c}{Llama-3.1-8B} & \multicolumn{2}{c}{Mistral-7B-v0.3} \\
+      \cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+      Group & Method & Objective & Subjective & Objective & Subjective & Objective & Subjective \\
+      \midrule
+      \multicolumn{8}{l}{\textbf{GEO-Bench}} \\
+      \midrule
+      Controls & Original / No Rewrite
+        & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+       & Neutral Rewrite
+        & -0.0030 & 0.5485 & 0.1066 & 1.3613 & 0.0865 & 1.9281 \\
+      \midrule
+      Evidence--Structure & Conclusion-First
+        & 0.0794 & 2.5574 & 0.0800 & 1.9225 & 0.1647 & 2.3297 \\
+       & Hierarchical Framing
+        & 0.0191 & 1.7545 & 0.1131 & 2.2818 & 0.3397 & 3.6535 \\
+       & Key-Point Enumeration
+        & \textbf{0.2856} & \textbf{3.8411} & \textbf{0.3315} & \textbf{3.6605} & \textbf{0.6558} & \textbf{5.1087} \\
+      \midrule
+      Latent-Intent & Explicit Purpose
+        & -0.0102 & 1.9653 & 0.1672 & 2.4692 & 0.1541 & 2.7504 \\
+       & Single Latent Intent
+        & -0.0217 & 1.5847 & 0.2313 & 3.2772 & 0.2972 & 3.2591 \\
+       & Multiple Latent Intents
+        & -0.0753 & 1.7236 & 0.0987 & 2.1689 & 0.3389 & 3.2031 \\
+      \midrule
+      Readability--Technicality & General-Audience Register
+        & 0.0285 & 1.4820 & 0.0515 & 1.6718 & 0.2168 & 2.6849 \\
+       & Mixed-Audience Register
+        & 0.0143 & 1.1553 & 0.1007 & 1.9252 & 0.2147 & 2.8862 \\
+       & Specialist Register
+        & 0.0285 & 1.4177 & 0.0561 & 1.6555 & 0.1686 & 2.8142 \\
+      \midrule
+      \multicolumn{8}{l}{\textbf{C-SEO Bench}} \\
+      \midrule
+      Controls & Original / No Rewrite
+        & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+       & Neutral Rewrite
+        & -0.0066 & 0.3314 & -0.0096 & 0.1647 & 0.0135 & 0.2822 \\
+      \midrule
+      Evidence--Structure & Conclusion-First
+        & 0.0524 & 2.3433 & -0.0103 & 1.5767 & 0.1194 & 1.8526 \\
+       & Hierarchical Framing
+        & 0.0448 & 2.0746 & 0.0107 & 2.3127 & 0.1817 & 2.5953 \\
+       & Key-Point Enumeration
+        & \textbf{0.1955} & \textbf{3.5742} & \textbf{0.3344} & \textbf{4.2997} & \textbf{0.3938} & \textbf{3.9524} \\
+      \midrule
+      Latent-Intent & Explicit Purpose
+        & 0.0854 & 2.6922 & 0.1192 & 2.5859 & 0.1394 & 2.0923 \\
+       & Single Latent Intent
+        & 0.0607 & 2.7024 & 0.0627 & 2.4048 & 0.2011 & 3.0850 \\
+       & Multiple Latent Intents
+        & 0.1025 & 2.4907 & 0.0963 & 3.4258 & 0.2495 & 3.1555 \\
+      \midrule
+      Readability--Technicality & General-Audience Register
+        & -0.0132 & 1.3690 & 0.0219 & 1.4620 & 0.0764 & 1.4555 \\
+       & Mixed-Audience Register
+        & 0.0171 & 1.6909 & 0.0248 & 1.2801 & 0.0152 & 0.8365 \\
+       & Specialist Register
+        & -0.0075 & 1.4214 & 0.0204 & 1.6249 & 0.0013 & 0.7420 \\
+      \bottomrule
+    \end{tabular}%
+  }
+\end{table*}
